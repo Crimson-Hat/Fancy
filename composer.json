@@ -1,0 +1,28 @@
+{
+	"name": "tecdiary/sma",
+	"version": "3.4.47",
+	"description": "Stock Manager Advance",
+	"type": "project",
+	"require": {
+		"php": "^7.3|^8.0",
+		"dompdf/dompdf": "^1.0.2",
+		"hybridauth/hybridauth": "^3.6.0",
+		"mike42/escpos-php": "^1.5",
+		"mpdf/mpdf": "^8.0.4",
+		"phpmailer/phpmailer": "^6.0.5",
+		"stripe/stripe-php": "^5.1",
+		"tecdiary/sms": "^1.0.2",
+		"league/oauth2-google": "^3.0",
+		"laminas/laminas-barcode": "^2.8",
+		"endroid/qr-code": "^3.7",
+		"phpoffice/phpspreadsheet": "^1.11",
+		"arutil/ar-php": "^0.1.1"
+	},
+	"license": "Commercial License",
+	"authors": [
+		{
+			"name": "Mian Saleem",
+			"email": "saleem@tecdiary.com"
+		}
+	]
+}

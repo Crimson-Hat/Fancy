@@ -1,0 +1,193 @@
+// Overwrite Bootstrap Styles
+
+body, a, .btn-default {
+    color: $font-color;
+}
+
+.btn {
+    border-radius: $border-radius;
+}
+
+.dropdown-menu {
+    border-radius: $border-radius;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+    > li > a {
+        color: $font-color;
+        line-height: 1.8em;
+        &:hover,
+        &:focus {
+            background-color: #eee;
+        }
+    }
+    .divider {
+        margin: 3px 0;
+    }
+}
+
+.form-control {
+    border-radius: $border-radius;
+    @include transition(none);
+    @include box-shadow(none);
+    &:focus {
+        @include box-shadow(none);
+    }
+}
+
+input[type=checkbox],
+input[type=radio] {
+    display: none;
+    + span::before {
+        font-family: 'fontAwesome';
+        font-size: 12px;
+        line-height: 14px;
+        position: relative;
+        top: -1px;
+        display: inline-block;
+        width: 16px;
+        margin-right: 2px;
+        margin-left: -20px;
+        content: '\a0';
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: $border-radius;
+        background-color: #fff;
+    }
+    &:checked + span::before {
+        color: $font-color;
+        content: '\f00c';
+    }
+}
+
+input[type=radio] {
+    display: none;
+    + span::before {
+        font-size: 9px;
+        margin-right: 4px;
+        border-radius: 100%;
+    }
+    &:checked + span::before {
+        content: '\f111';
+        color: $font-color;
+    }
+}
+
+.title {
+    line-height: 1;
+    margin: 0 0 10px;
+    padding: 0;
+    > span {
+        display: inline-block;
+        margin-bottom: -3px;
+        padding-bottom: 10px;
+        color: $font-color;
+        > a {
+            color: $font-color;
+        }
+    }
+}
+
+.list-group-item {
+    border-radius: $border-radius !important;
+    padding: 5px;
+    .close {
+        font-size: 18px;
+    }
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.25;
+    display: inline-block;
+    height: 20px;
+    border-radius: $border-radius;
+}
+
+.pagination {
+    margin: 0;
+}
+
+.pagination-right {
+    float: right;
+}
+
+.pagination-left {
+    float: left;
+}
+
+.bootstrap-select {
+    .dropdown-toggle {
+        border-radius: $border-radius;
+        &:active,
+        &:hover,
+        &:focus {
+            border-color: #ccc;
+            outline: 0 !important;
+            background-color: #eee;
+            @include box-shadow(none);
+        }
+    }
+}
+
+.bootstrap-select.btn-group .dropdown-menu li a:focus {
+    outline: 0;
+}
+
+.bootstrap-select.open .dropdown-toggle {
+    @include box-shadow(none);
+    background-color: #eee;
+    &:hover {
+        background-color: #eee;
+    }
+}
+
+.list-group-nav .list-group-item {
+    padding-left: 10px;
+    border: 0;
+    border-bottom: 1px dotted #ccc;
+    background: transparent;
+}
+
+
+// Carousel
+.carousel {
+    .carousel-indicators {
+        bottom: 0;
+    }
+
+    .carousel-control {
+        opacity: .1;
+        width: 10%;
+        span, i {
+            display: inline-block;
+            font-size: 20px;
+            height: 20px;
+            margin-top: -10px;
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            z-index: 5;
+        }
+    }
+
+    .carousel-control:hover {
+        opacity: .3;
+    }
+
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}
+
+.bootstrap-select {
+    padding: 0 !important;
+}
+.swal2-modal .swal2-spacer {
+    height: 0;
+}

@@ -1,0 +1,176 @@
+// Header Styles
+
+// Topbar
+.top-header {
+    ul.list-inline {
+        margin-bottom: 0;
+        > li {
+            float: left;
+            margin: 0;
+            padding: 0;
+            .dropdown-toggle {
+                background-color: transparent;
+                border-radius: $border-radius;
+                &:focus {
+                    outline: none !important;
+                }
+            }
+            > a,
+            > .btn,
+            .dropdown-toggle {
+                border: 0;
+                display: block;
+                line-height: 1.8;
+                padding: 5px 7px;
+                &:hover,
+                &:focus,
+                &:active {
+                    text-decoration: none;
+                    @include box-shadow(none);
+                }
+            }
+            .dropdown.open > .dropdown-toggle,
+            .bootstrap-select.open > .dropdown-toggle {
+                text-decoration: none;
+                @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.1) inset);
+            }
+            .dropdown-toggle img,
+            .dropdown-menu img {
+                margin-bottom: 2px;
+            }
+            .dropdown-menu-login {
+                line-height: 1.4;
+                min-width: 230px;
+                padding: 10px;
+                button {
+                    border-radius: $border-radius;
+                }
+            }
+        }
+    }
+}
+
+
+// Main Header
+.main-header {
+    background-color: $bg-light;
+    .search-box {
+        .bootstrap-select {
+            > .dropdown-toggle,
+            > .dropdown-menu {
+                margin-left: -1px;
+            }
+        }
+    }
+
+    .cart-btn {
+        > button {
+            float: right;
+        }
+        > .dropdown-menu {
+            max-height: 400px;
+            min-width: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            right: 15px;
+        }
+    }
+}
+
+
+// Navbar
+.navbar {
+    background-color: $bg-color;
+    border: 0;
+    // border-color: $bg-darker;
+    border-radius: $border-radius;
+    margin-bottom: 0;
+    min-height: inherit;
+    position: relative;
+    // @include box-shadow(0 2px 5px rgba(0, 0, 0, .1));
+    .navbar-nav > li > a {
+        color: $font-color;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .navbar-toggle {
+        background-color: $bg-light;
+        border-radius: $border-radius;
+        float: left;
+        margin-left: 15px;
+        margin-right: 0;
+        padding: 5px 7px;
+    }
+    .btn-cart-xs {
+        background-color: $bg-light;
+        color: $font-color;
+        font-size: 13px;
+        margin-right: 15px;
+        margin-top: 8px;
+    }
+}
+
+.dropdown-submenu {
+    position:relative;
+    > .dropdown-menu {
+        left: 100%;
+        top: 0;
+    }
+}
+
+.dropdown-menu-2x {
+    min-width: 400px;
+}
+
+.dropdown-menu-content {
+    ul {
+        border-right: 1px solid rgba(0, 0, 0, .25);
+        &:last-child {
+            border-right: 0;
+        }
+    }
+}
+
+// Mega Menu
+.mega-menu {
+    position: static !important;
+    .dropdown-menu {
+        width: 100%;
+    }
+    .mega-menu-content {
+        padding: 20px 30px 5px;
+    }
+    .list-unstyled {
+        margin-bottom: 15px;
+        a {
+            display: block;
+            padding: 3px 20px 3px 10px;
+            &:hover {
+                background-color: #eee;
+                color: #262626;
+                text-decoration: none;
+            }
+            &::before {
+                content: '\f111';
+                font-family: 'fontAwesome';
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+
+// Breadcrumbs
+.breadcrumb-container {
+    background-color: #f5f5f5;
+    .breadcrumb {
+        background-color: transparent;
+        border-radius: $border-radius;
+        margin-bottom: 0;
+        padding-top: 10px;
+        > li + li:before {
+            content: '\f101';
+            font-family: 'fontAwesome';
+        }
+    }
+}

@@ -1,0 +1,260 @@
+$no-type-val: 0 !important;
+$xs-type-val: .25rem !important;
+$sm-type-val: .5rem !important;
+$md-type-val: 1rem !important;
+$lg-type-val: 1.5rem !important;
+$xl-type-val: 2rem !important;
+
+$layouts: no xs sm md lg xl;
+$variants: top right bottom left;
+
+@each $type in $layouts {
+    .margin-#{$type} {
+        @if ($type == no) {
+            margin: $no-type-val;
+        } @else if ($type == xs) {
+            margin: $xs-type-val;
+        } @else if ($type == sm) {
+            margin: $sm-type-val;
+        } @else if ($type == md) {
+            margin: $md-type-val;
+        } @else if ($type == lg) {
+            margin: $lg-type-val;
+        } @else if ($type == xl) {
+            margin: $xl-type-val;
+        }
+    }
+
+    .margin-x-#{$type} {
+        @if ($type == no) {
+            margin-left: $no-type-val;
+            margin-right: $no-type-val;
+        } @else if ($type == xs) {
+            margin-left: $xs-type-val;
+            margin-right: $xs-type-val;
+        } @else if ($type == sm) {
+            margin-left: $sm-type-val;
+            margin-right: $sm-type-val;
+        } @else if ($type == md) {
+            margin-left: $md-type-val;
+            margin-right: $md-type-val;
+        } @else if ($type == lg) {
+            margin-left: $lg-type-val;
+            margin-right: $lg-type-val;
+        } @else if ($type == xl) {
+            margin-left: $xl-type-val;
+            margin-right: $xl-type-val;
+        }
+    }
+
+    .margin-y-#{$type} {
+        @if ($type == no) {
+            margin-bottom: $no-type-val;
+            margin-top: $no-type-val;
+        } @else if ($type == xs) {
+            margin-bottom: $xs-type-val;
+            margin-top: $xs-type-val;
+        } @else if ($type == sm) {
+            margin-bottom: $sm-type-val;
+            margin-top: $sm-type-val;
+        } @else if ($type == md) {
+            margin-bottom: $md-type-val;
+            margin-top: $md-type-val;
+        } @else if ($type == lg) {
+            margin-bottom: $lg-type-val;
+            margin-top: $lg-type-val;
+        } @else if ($type == xl) {
+            margin-bottom: $xl-type-val;
+            margin-top: $xl-type-val;
+        }
+    }
+
+    @each $variant in $variants {
+        .margin-#{$variant}-#{$type} {
+            @if ($type == no) {
+                margin-#{$variant}: $no-type-val;
+            } @else if ($type == xs) {
+                margin-#{$variant}: $xs-type-val;
+            } @else if ($type == sm) {
+                margin-#{$variant}: $sm-type-val;
+            } @else if ($type == md) {
+                margin-#{$variant}: $md-type-val;
+            } @else if ($type == lg) {
+                margin-#{$variant}: $lg-type-val;
+            } @else if ($type == xl) {
+                margin-#{$variant}: $xl-type-val;
+            }
+        }
+    }
+
+    .padding-#{$type} {
+        @if ($type == no) {
+            padding: $no-type-val;
+        } @else if ($type == xs) {
+            padding: $xs-type-val;
+        } @else if ($type == sm) {
+            padding: $sm-type-val;
+        } @else if ($type == md) {
+            padding: $md-type-val;
+        } @else if ($type == lg) {
+            padding: $lg-type-val;
+        } @else if ($type == xl) {
+            padding: $xl-type-val;
+        }
+    }
+
+    .padding-x-#{$type} {
+        @if ($type == no) {
+            padding-left: $no-type-val;
+            padding-right: $no-type-val;
+        } @else if ($type == xs) {
+            padding-left: $xs-type-val;
+            padding-right: $xs-type-val;
+        } @else if ($type == sm) {
+            padding-left: $sm-type-val;
+            padding-right: $sm-type-val;
+        } @else if ($type == md) {
+            padding-left: $md-type-val;
+            padding-right: $md-type-val;
+        } @else if ($type == lg) {
+            padding-left: $lg-type-val;
+            padding-right: $lg-type-val;
+        } @else if ($type == xl) {
+            padding-left: $xl-type-val;
+            padding-right: $xl-type-val;
+        }
+    }
+
+    .padding-y-#{$type} {
+        @if ($type == no) {
+            padding-bottom: $no-type-val;
+            padding-top: $no-type-val;
+        } @else if ($type == xs) {
+            padding-bottom: $xs-type-val;
+            padding-top: $xs-type-val;
+        } @else if ($type == sm) {
+            padding-bottom: $sm-type-val;
+            padding-top: $sm-type-val;
+        } @else if ($type == md) {
+            padding-bottom: $md-type-val;
+            padding-top: $md-type-val;
+        } @else if ($type == lg) {
+            padding-bottom: $lg-type-val;
+            padding-top: $lg-type-val;
+        } @else if ($type == xl) {
+            padding-bottom: $xl-type-val;
+            padding-top: $xl-type-val;
+        }
+    }
+
+    @each $variant in $variants {
+        .padding-#{$variant}-#{$type} {
+            @if ($type == no) {
+                padding-#{$variant}: $no-type-val;
+            } @else if ($type == xs) {
+                padding-#{$variant}: $xs-type-val;
+            } @else if ($type == sm) {
+                padding-#{$variant}: $sm-type-val;
+            } @else if ($type == md) {
+                padding-#{$variant}: $md-type-val;
+            } @else if ($type == lg) {
+                padding-#{$variant}: $lg-type-val;
+            } @else if ($type == xl) {
+                padding-#{$variant}: $xl-type-val;
+            }
+        }
+    }
+}
+
+.margin-x-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.no-shadow {
+    box-shadow: none !important;
+}
+
+.text-bold {
+    font-weight: bold !important;
+}
+
+.text-normal {
+    font-weight: normal !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.cursor-normal {
+    cursor: normal !important;
+}
+
+.line-height-md {
+    line-height: 1 !important;
+}
+
+.line-height-lg {
+    line-height: 1.5 !important;
+}
+
+.line-height-xl {
+    line-height: 2.5 !important;
+}
+
+.line-height-2x {
+    line-height: 2 !important;
+}
+
+.line-height-3x {
+    line-height: 3 !important;
+}
+
+.text-size-xs {
+    font-size: .6em !important;
+}
+
+.text-size-sm {
+    font-size: .8em !important;
+}
+
+.text-size-md {
+    font-size: 1em !important;
+}
+
+.text-size-lg {
+    font-size: 1.5em !important;
+}
+
+.text-size-2x {
+    font-size: 2em !important;
+}
+
+.text-size-3x {
+    font-size: 3em !important;
+}
+
+.display-block {
+    display: block !important;
+}
+
+.display-inline-block {
+    display: inline-block !important;
+}
+
+.display-inline {
+    display: inline !important;
+}
+
+.bordered {
+    border: 1px solid $border-color;
+}
+
+.bordered-light {
+    border: 1px solid $border-color-light;
+}
+
+.table-va-middle th, .table-va-middle td {
+    vertical-align: middle !important;
+}

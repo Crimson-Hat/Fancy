@@ -1,0 +1,225 @@
+// Theme color styles
+@each $color in $colors-array {
+
+    $name: nth($color, 1);
+    $color: nth($color, 2);
+    $color-dark: darken($color, 4%);
+    $color-darker: darken($color, 8%);
+    $color-light: lighten($color, 4%);
+    $color-lighter: lighten($color, 8%);
+
+    .#{$name} {
+        background-color: $color !important;
+
+        .theme {
+            background-color: $color !important;
+        }
+
+        .btn-theme {
+            @include button-variant($white, $color, $color-dark);
+        }
+
+        a {
+            @if $name == "white" { 
+                color: $blue;
+                &:hover, &:focus, &:active {
+                    color: darken($blue, 5%);
+                }
+            } @else {
+                color: $color;
+                &:hover, &:focus, &:active {
+                    color: $color-darker;
+                }
+            }
+            &.btn-primary, &.btn-info, &.btn-danger {
+                color: $white !important;
+            }
+        }
+
+        // .btn-default {
+        //     @if $name == "white" {
+        //         border-color: $blue;
+        //         color: $blue;
+        //     } @else {
+        //         border-color: $color;
+        //         color: $color;
+        //     }
+        // }
+
+        .form-control:focus {
+            @if $name == "white" {
+                border-color: $blue;
+            } @else {
+                border-color: $color;
+            }
+        }
+
+        input[type=checkbox],
+        input[type=radio] {
+            &:checked + span::before {
+                @if $name == "white" {
+                    color: $font-color;
+                } @else {
+                    color: $color;
+                }
+            }
+        }
+
+        .bg {
+            label {
+                width: 100%;
+                padding: 0;
+            }
+            input[type=checkbox],
+            input[type=radio] {
+                + span {
+                    display: block;
+                    padding: 10px;
+                    width: 100%;
+                    &::before {
+                        display: none;
+                    }
+                }
+                &:checked + span {
+                    color: $white;
+                    background-color: $color;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .title {
+            border-bottom: 3px solid $color-dark;
+            span {
+                border-bottom: 3px solid $color-darker;
+            }
+        }
+
+        .bootstrap-select .dropdown-toggle:focus,
+        .bootstrap-select.open .dropdown-toggle,
+        .bootstrap-select.open .dropdown-toggle:hover {
+            border-color: $color;
+        }
+
+        .img-thumbnail:hover {
+            border-color: $color;
+        }
+
+        .top-header {
+            background-color: $color;
+            ul.list-inline > li {
+                > a,
+                .dropdown-toggle {
+                    color: $white;
+                    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background-color: $color-dark;
+                        border-color: $color-dark;
+                    }
+                }
+                .dropdown.open > .dropdown-toggle,
+                .bootstrap-select.open > .dropdown-toggle {
+                    background-color: $color-darker;
+                    color: $white;
+                }
+                &:hover, &:focus {
+                    background-color: $color-dark;
+                }
+            }
+        }
+
+        .main-header {
+            .btn-search {
+                background-color: $color;
+                border-color: transparent;
+                color: $white;
+                &:active,
+                &:focus {
+                    background-color: $color-darker;
+                    border-color: transparent;
+                    color: $white;
+                    outline: 0;
+                }
+            }
+            .cart-btn > button:hover {
+                border-color: $color;
+            }
+            .cart-btn.open > button {
+                border-color: $color !important;
+            }
+        }
+
+        .navbar {
+            .navbar-nav > .active > a,
+            .navbar-nav > .active > a:focus,
+            .navbar-nav > .active > a:hover,
+            .navbar-nav > .active > a:active,
+            .navbar-nav > li > a:focus,
+            .navbar-nav > li > a:hover,
+            .navbar-nav > li > a:active,
+            .navbar-nav > .open > a,
+            .navbar-nav > .open > a:focus,
+            .navbar-nav > .open > a:active,
+            .navbar-nav > .open > a:hover {
+                background-color: $color;
+                color: $white !important;
+            }
+            .navbar-toggle,
+            .btn-cart-xs {
+                &:active,
+                &:focus,
+                &:hover {
+                    border-color: $color;
+                }
+            }
+        }
+
+        .breadcrumb-container .breadcrumb > li > a {
+            color: $color;
+        }
+
+        .featured-products {
+            .product .stats-container .product_price, .product .btn:hover {
+                color: $color !important;
+            }
+            .product .image_overlay {
+                background: $color !important;
+            }
+        }
+
+        .pagination {
+            > .active > a,
+            > .active > span {
+                &,
+                &:hover,
+                &:focus {
+                    background-color: $color;
+                    border-color: $color;
+                }
+            }
+        }
+
+        .footer {
+            a {
+                color: $color;
+                &:hover {
+                    color: $color-light;
+                }
+            }
+            .follow-us li a:hover{
+                background-color: $color;
+                color: $white;
+            }
+        }
+
+    }
+
+    .text-#{$name} {
+        color: $color !important;
+    }
+
+}

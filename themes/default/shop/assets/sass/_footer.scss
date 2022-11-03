@@ -1,0 +1,96 @@
+// Footer Styles
+.footer {
+    background-color: $bg-color-footer;
+    bottom: 0;
+    color: $font-color-footer;
+    font-size: 13px;
+    left: 0;
+    position: absolute;
+    right: 0;
+
+    .title-footer {
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+        font-size: 18px;
+        line-height: 1;
+        margin: 10px 0;
+        padding: 10px 0;
+        > span {
+            color: $bg-color;
+            display: inline-block;
+        }
+    }
+
+    ul {
+        line-height: 1.7;
+        list-style: none;
+        padding: 0;
+        li a {
+            color: $bg-darker;
+        }
+    }
+
+    ul.list-inline {
+        list-style: none;
+        margin: 0;
+        li {
+            display: inline;
+            margin-right: 5px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: darken($bg-color-footer,10%);
+        color: $bg-color;
+        padding: 10px;
+        .copyright {
+            float: left;
+            width: 250px;
+        }
+    }
+
+    .follow-us {
+        display: inline-block;
+        li {
+            float: left;
+            a {
+                border-radius: 100%;
+                display: block;
+                font-size: 16px;
+                height: 32px;
+                line-height: 2;
+                margin-right: 5px;
+                text-align: center;
+                width: 32px;
+                @include transition(all .1s ease 0s);
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.back-to-top {
+    background-color: darken($bg-color-footer,10%);
+    bottom: 5px;
+    color: $bg-color;
+    display: none;
+    height: 28px;
+    line-height: 28px;
+    position: fixed;
+    right: 10px;
+    width: 28px;
+    z-index: 999;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $bg-color;
+    }
+    &:hover {
+        background-color: $bg-color;
+        @include transition(all 100ms ease-in-out 0s);
+    }
+}
